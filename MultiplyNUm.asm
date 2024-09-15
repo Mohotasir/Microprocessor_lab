@@ -1,13 +1,22 @@
 
-; You may customize this and other start-up templates; 
-; The location of this template is c:\emu8086\inc\0_com_template.txt
+.MODEL SMALL
 
-org 100h
+.DATA
+   A DB 03H
+   B DB 04H
+   RES DB ?
 
-; add your code here
-
-ret
-
-
+.CODE
 
 
+MAIN PROC
+     MOV AX,@DATA
+     MOV DS,AX
+     
+     MOV AL,A
+     MUL B
+     MOV RES,AL
+     HLT
+        
+    MAIN ENDP 
+END MAIN

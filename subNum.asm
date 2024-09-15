@@ -14,7 +14,7 @@ MAIN PROC
      MOV DS,AX
      
      MOV AL,A
-     MUL  B
+     SUB AL,B
      MOV RES,AL
      HLT
         

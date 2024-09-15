@@ -22,5 +22,5 @@ MAIN PROC
     MOV AH, 4CH    ; Terminate program (DOS interrupt)
     INT 21H        ; Call DOS to terminate
 
-MAIN ENDP          ; End of main procedure
+  MAIN ENDP          ; End of main procedure
 END MAIN           ; End of the program

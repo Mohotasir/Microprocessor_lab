@@ -27,3 +27,43 @@ DH: The higher 8 bits of the DX register.
 DL: The lower 8 bits of the DX register.
 Common Usage: The DX register is used to store the high word in 32-bit multiplication or division. It is also used in port I/O operations where the port address is placed in DX.
 
+////////////////////////////////////////////////
+
+; function AH a thakbe
+; ascii AL  a thakbe
+
+.MODEL SMALL
+
+.DATA 
+ VAR1 DB ?
+ VAR2 DB ?
+ SUM DB ? 
+ RES DW ?
+.CODE 
+MAIN PROC
+  MOV AX, @DATA 
+  MOV DS, AX    
+  
+  MOV AH, 01H   
+  INT 21H          
+  SUB AL,30H
+  MOV VAR1,AL
+  
+  MOV AH, 01H
+  INT 21H
+  SUB AL,30H
+  MOV VAR2, AL
+  
+  ADD AL, VAR1
+  MOV SUM, AL
+   
+  MUL SUM
+  MOV RES,AX
+  
+
+  
+  MOV AH, 4CH  ; EXIT TO DOS
+  INT 21H 
+  MAIN ENDP
+ END MAIN 
+  

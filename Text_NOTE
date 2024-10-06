@@ -1,0 +1,3 @@
+## Functions :
+----------------
+In the 8086 microprocessor, functions such as FUNC1, FUNC2, etc., refer to interrupt service routines that are invoked by software interrupts. The 8086 microprocessor supports interrupts (both hardware and software), which allow it to handle specific tasks like I/O processing, timer handling, and others.

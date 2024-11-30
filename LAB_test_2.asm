@@ -10,7 +10,7 @@ MAIN PROC
 
     MOV AX, @DATA               
     MOV DS, AX
-    MOV ES, AX
+ 
 
 READ_INPUT:
     MOV AH, 01H                  

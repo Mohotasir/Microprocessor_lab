@@ -1,4 +1,4 @@
-.MODEL SMALL
+               .MODEL SMALL
 .DATA
     count DB 0                  
     msg DB 'Number of characters entered: $'         
@@ -27,10 +27,10 @@ DISPLAY:
     LEA DX, msg                  
     INT 21H                      
 
-    MOV AL, count               
-    ADD AL, 30H                  
-    MOV DL, AL                   
-    MOV AH, 2                    
+                   
+    MOV DL,count
+    ADD DL,30H                  
+    MOV AH, 02H                    
     INT 21H                     
 
     MOV AH, 4CH                  
